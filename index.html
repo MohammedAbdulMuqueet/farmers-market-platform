@@ -3,12 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farmers Market Platform</title>
+    <title>Farmers Market</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <h1>Welcome to the Farmers Market Platform</h1>
-    <!-- Add more content here -->
+    <header>
+        <h1>Welcome to the Farmers Market Platform</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="farmer.html">Farmer Register</a></li>
+                <li><a href="consumer.html">Consumer Register</a></li>
+                <li><a href="farmer-login.html">Farmer Login</a></li>
+                <li><a href="consumer-login.html">Consumer Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <video autoplay muted loop class="video-background">
+            <source src="assets/background.mp4" type="video/mp4">
+        </video>
+        <div class="description">
+            <h2>Welcome to the Farmers Market Platform!</h2>
+            <p>Our website is dedicated to supporting the Sustainable Development Goals by fostering direct connections between farmers and consumers. By creating a seamless platform, we empower farmers to sell their fresh fruits, vegetables, and dairy products directly to you, cutting out intermediaries and ensuring you receive high-quality, affordable produce.</p>
+            
+            <h3>Why Choose Us?</h3>
+            <ul>
+                <li><strong>Freshness Guaranteed:</strong> Experience the taste of farm-fresh produce delivered directly from local farms to your table. Enjoy fruits, vegetables, and dairy products at the peak of their freshness.</li>
+                <li><strong>Affordable Prices:</strong> With no middlemen involved, we help farmers offer their products at more competitive prices. Save money while supporting local agriculture.</li>
+                <li><strong>Support Local Farmers:</strong> By buying directly from farmers, you contribute to the sustainability of local agriculture, helping farmers thrive and fostering a healthier community.</li>
+            </ul>
+
+            <p>Our platform is designed to make it easy for you to explore, choose, and purchase a variety of farm products. Join us in promoting sustainable living and supporting local economies. Together, we can make a significant impact on both our environment and our communities. Please provide your valuable feedback for our website.</p>
+
+            <p><strong>Build By:</strong></p>
+            <ul>
+                <strong><li>Mohammed Roshan</li></strong>
+                <strong><li>Mohammed Abdul Muqueet</li></strong>
+                <strong><li>Mohammed Salman Ahmed</li></strong>
+                <strong><li>Nallala Akshith Reddy</li></strong>
+                <strong><li>Nalamaru Noah Naveen</li></strong>
+                <strong><li>Arshiya Jasmeen</li></strong>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Farmers Market Platform - IBM SkillsBuild</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const video = document.querySelector('.video-background');
+            if (video) {
+                video.playbackRate = 0.5; 
+            }
+        });
+    </script>
     <script src="scripts/app.js"></script>
 </body>
 </html>

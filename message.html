@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmers Market</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Farmers Market Platform</h1>
+        <nav>
+            <ul>
+                <li><a href="message.html">Feedback</a></li>
+                <li><a href="admin.html">Admin</a></li>                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <video autoplay muted loop class="video-background">
+            <source src="assets/background.mp4" type="video/mp4">
+        </video>
+        <h2>Provide Your Feedback</h2>
+        <form id="feedback-form">
+            <label for="feedback-text"><strong>Your Feedback:</strong></label>
+            <textarea id="feedback-text" name="feedback-text" rows="4" required></textarea>
+            <button id="send-feedback" type="submit">Send Feedback</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Farmers Market Platform - IBM SkillsBuild</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const video = document.querySelector('.video-background');
+            if (video) {
+                video.playbackRate = 0.5;
+            }
+        });
+    </script>
+    <script>
+        document.getElementById('feedback-form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const feedbackText = document.getElementById('feedback-text').value;
+            const token = localStorage.getItem('token');
+
+            console.log('Token:', token); 
+
+            if (!token) {
+                alert('No token found, please log in first.');
+                return;
+            }
+
+            try {
+                const response = await fetch('http://localhost:3000/api/feedback', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify({ feedback: feedbackText })
+                });
+
+
+                const result = await response.json(); 
+                console.log('Response from server:', result); 
+
+
+                if (response.ok) {
+                    alert('Feedback sent successfully');
+                    document.getElementById('feedback-form').reset();
+                } else {
+                    
+                    throw new Error(result.message || 'Failed to send feedback');
+                }
+            } catch (error) {
+                console.error('Error sending feedback:', error);
+                alert('An error occurred while sending the feedback: ' + error.message);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmers Market</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script defer src="scripts/admin.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Farmers Market Platform</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="farmer.html">Farmer Register</a></li>
+                <li><a href="consumer.html">Consumer Register</a></li>
+                <li><a href="farmer-login.html">Farmer Login</a></li>
+                <li><a href="consumer-login.html">Consumer Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <video autoplay muted loop class="video-background">
+            <source src="assets/background.mp4" type="video/mp4">
+        </video>
+        <h2>Admin Dashboard</h2>
+        <div id="login-container">
+            <h3>Admin Login</h3>
+            <form id="admin-login-form">
+                <label for="email"><strong>Email:</strong></label>
+                <input type="email" id="email" name="email" required>
+                <label for="password"><strong>Password:</strong></label>
+                <input type="password" id="password" name="password" required>
+                <button id="admin-login-button" type="submit">Login</button>
+            </form>
+        </div>
+        <div id="feedback-container" style="display: none;">
+            
+            <button id="delete-feedback-btn">Delete All Feedback</button>
+            <h3>Feedback</h3>
+            <ul id="feedback-list">
+                
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Farmers Market Platform - IBM SkillsBuild</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const video = document.querySelector('.video-background');
+            if (video) {
+                video.playbackRate = 0.5; 
+            }
+        });
+    </script>
+</body>
+</html>

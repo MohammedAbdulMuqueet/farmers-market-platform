@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmers Market</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Farmers Market Platform</h1>
+        <nav>
+            <ul>
+                <li><a href="order.html">Orders</a></li>
+                <li><a href="message.html">Feedback</a></li>
+                <li><a href="consumer-login.html">Consumer Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <video autoplay muted loop class="video-background">
+            <source src="assets/background.mp4" type="video/mp4">
+        </video>
+        <h2>Fill Product Details</h2>
+        <form id="product-form" enctype="multipart/form-data">
+            <label for="product-name"><strong>Product Name:</strong></label>
+            <input type="text" id="product-name" name="productName" required><br>
+
+            <label for="quantity"><strong>Quantity in Kg/Dozen:</strong></label>
+            <input type="number" id="quantity" name="quantity" required><br>
+
+            <label for="product-price"><strong>Price per Kg/Dozen:</strong></label>
+            <input type="number" id="product-price" name="price" required><br><br>
+
+            <label for="category-select"><strong>Category:</strong></label>
+            <select id="category-select" name="category" required>
+            </select><br><br>
+
+            <label for="images"><strong>Upload Images:</strong></label>
+            <input type="file" id="images" name="images" multiple accept="image/*"><br><br>
+
+            <button id="add-product" type="submit">Add Product</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Farmers Market Platform - IBM SkillsBuild</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const video = document.querySelector('.video-background');
+            if (video) {
+                video.playbackRate = 0.5; 
+            }
+        });
+    </script>
+    <script src="scripts/product.js"></script>
+</body>
+</html>
