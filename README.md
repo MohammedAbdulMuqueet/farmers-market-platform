@@ -38,7 +38,7 @@ Make sure you have Node.js and npm installed. Then, install the required depende
 3. **Create Environment File**
 
 Create a '.env' file in the root directory and add the following content: 
-    ```bash
+    
    JWT_SECRET=your_jwt_secret
 
 4. **Run the Application**
