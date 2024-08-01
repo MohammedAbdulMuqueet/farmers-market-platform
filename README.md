@@ -33,19 +33,22 @@ The Farmers Market Platform is a full-stack web application designed to connect 
 
 Make sure you have Node.js and npm installed. Then, install the required dependencies:
    
-   npm install
+```bash
+npm install
 
 3. **Create Environment File**
 
 Create a '.env' file in the root directory and add the following content:
 
-   JWT_SECRET=your_jwt_secret
+```bash
+JWT_SECRET=your_jwt_secret
 
 4. **Run the Application**
 
 To start the server, run:
 
-   npm start
+```bash
+npm start
 
 The server will start on 'http://localhost:3000.'
 
