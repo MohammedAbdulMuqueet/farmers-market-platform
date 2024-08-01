@@ -51,29 +51,29 @@ The server will start on 'http://localhost:3000.'
 
 ## Usage
 
-**Farmer Registration:** Access '/farmer-register' to register a new farmer.
-**Consumer Registration:** Access '/consumer-register' to register a new consumer.
-**Farmer Login:** Access '/farmer-login' to log in as a farmer and manage products.
-**Consumer Login:** Access '/consumer-login' to log in as a consumer and place orders.
-**Admin Login:** Access '/admin/login' to log in as an admin and manage feedback.
+- **Farmer Registration:** Access '/farmer-register' to register a new farmer.
+- **Consumer Registration:** Access '/consumer-register' to register a new consumer.
+- **Farmer Login:** Access '/farmer-login' to log in as a farmer and manage products.
+- **Consumer Login:** Access '/consumer-login' to log in as a consumer and place orders.
+- **Admin Login:** Access '/admin/login' to log in as an admin and manage feedback.
 
 ## API Endpoints
 
-**POST /admin/login:** Admin login. Provides a token for admin access.
-**POST /feedback:** Post feedback (authentication required).
-**GET /feedback:** Get all feedback (authentication required).
-**DELETE /feedback:** Delete all feedback (admin access required).
-**POST /farmer-register:** Register a new farmer.
-**POST /consumer-register:** Register a new consumer.
-**POST /farmer-login:** Farmer login.
-**POST /consumer-login:** Consumer login.
-**POST /add-product:** Add a new product (authentication required).
-**GET /products/id/:** Get product details by ID.
-**GET /products/category/:** Get products by category.
-**DELETE /products:** Delete all products (admin access required).
-**GET /categories:** Get allowed product categories.
-**POST /place-order:** Place an order (authentication required).
-**GET /orders:** Get consumer orders (authentication required).
+- **POST /admin/login:** Admin login. Provides a token for admin access.
+- **POST /feedback:** Post feedback (authentication required).
+- **GET /feedback:** Get all feedback (authentication required).
+- **DELETE /feedback:** Delete all feedback (admin access required).
+- **POST /farmer-register:** Register a new farmer.
+- **POST /consumer-register:** Register a new consumer.
+- **POST /farmer-login:** Farmer login.
+- **POST /consumer-login:** Consumer login.
+- **POST /add-product:** Add a new product (authentication required).
+- **GET /products/id/:** Get product details by ID.
+- **GET /products/category/:** Get products by category.
+- **DELETE /products:** Delete all products (admin access required).
+- **GET /categories:** Get allowed product categories.
+- **POST /place-order:** Place an order (authentication required).
+- **GET /orders:** Get consumer orders (authentication required).
 
 ## Contributing
 
