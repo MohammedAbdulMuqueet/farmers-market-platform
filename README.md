@@ -75,6 +75,10 @@ The server will start on 'http://localhost:3000.'
 - **POST /place-order:** Place an order (authentication required).
 - **GET /orders:** Get consumer orders (authentication required).
 
+## Viewing the Website
+
+The website can be viewed locally at '127.0.0.1:5500'.
+
 ## Contributing
 
 Contributions are welcome! If you have suggestions or improvements, please open an issue or submit a pull request.
